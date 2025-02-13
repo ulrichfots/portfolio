@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Portfolio</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container" id="loginForm">
+        <div class="login-box glass-morphism">
+            <h2>Connexion Admin</h2>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">Identifiant</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="login-btn">Se connecter</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="admin-dashboard" id="adminDashboard" style="display: none;">
+        <nav class="admin-nav">
+            <div class="nav-header">
+                <h2>Administration</h2>
+                <button onclick="handleLogout()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                </button>
+            </div>
+            <ul class="nav-tabs">
+                <li class="active" data-tab="formations">Formations</li>
+                <li data-tab="experiences">Expériences</li>
+                <li data-tab="projets">Projets</li>
+                <li data-tab="about">À propos</li>
+                <li data-tab="competences">Compétences</li>
+            </ul>
+        </nav>
+
+        <main class="admin-content">
+            <!-- Section Formations -->
+            <section id="formations" class="content-section active">
+                <h3>Gestion des Formations</h3>
+                <button class="add-btn" onclick="showAddForm('formation')">
+                    <i class="fas fa-plus"></i> Ajouter une formation
+                </button>
+                <div class="items-grid" id="formationsList">
+                    <!-- Les formations seront chargées dynamiquement ici -->
+                </div>
+            </section>
+
+            <!-- Autres sections similaires pour expériences, projets, etc. -->
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html> 
