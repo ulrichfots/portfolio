@@ -1,5 +1,0 @@
-# Protéger le dossier admin
-AuthType Basic
-AuthName "Zone d'administration"
-AuthUserFile /chemin/vers/.htpasswd
-Require valid-user 
