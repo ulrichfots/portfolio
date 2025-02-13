@@ -1,0 +1,203 @@
+:root {
+    --primary-color: #3B82F6;
+    --secondary-color: #1E40AF;
+    --background-color: #F3F4F6;
+    --text-color: #1F2937;
+    --error-color: #DC2626;
+    --success-color: #059669;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--background-color);
+}
+
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Login */
+.login-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+}
+
+.login-box {
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Dashboard */
+.admin-dashboard {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+.admin-nav {
+    background: white;
+    padding: 1.5rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 1px solid var(--error-color);
+    color: var(--error-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: var(--error-color);
+    color: white;
+}
+
+.nav-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-tabs li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs li:hover {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color);
+}
+
+.nav-tabs li.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Contenu principal */
+.admin-content {
+    padding: 2rem;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.add-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--success-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Grid des éléments */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.item-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 600px;
+    padding: 2rem;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+} 
